@@ -1,5 +1,11 @@
+import Navbar from "../components/Navbar";
+
 const HomePage = () => {
-  return <div>Hello next auth </div>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 };
 
 export default HomePage;

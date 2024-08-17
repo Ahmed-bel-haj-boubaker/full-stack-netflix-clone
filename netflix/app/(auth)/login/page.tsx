@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { GithubIcon } from "lucide-react";
 import Link from "next/link";
 import googleIcon from "../../../public/images/google.svg";
 import Image from "next/image";
-import { signIn } from "next-auth/react";
 import GithubSignInButton from "@/app/components/GithubSignInButton";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/utils/auth";
