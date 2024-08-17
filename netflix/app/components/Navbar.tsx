@@ -5,6 +5,7 @@ import Logo from "../../public/images/logo.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Bell, Search } from "lucide-react";
+import UserNav from "./UserNav";
 
 interface linkProps {
   name: string;
@@ -57,6 +58,7 @@ const Navbar = () => {
       <div className="flex items-center gap-x-8">
         <Search className="  size-5 text-gray-300 cursor-pointer" />
         <Bell className="  size-5 text-gray-300 cursor-pointer" />
+        <UserNav />
       </div>
     </div>
   );
