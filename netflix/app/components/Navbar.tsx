@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo from "../../public/images/logo.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Bell, Search } from "lucide-react";
 
 interface linkProps {
   name: string;
@@ -11,7 +12,7 @@ interface linkProps {
 }
 
 const links: linkProps[] = [
-  { name: "home", href: "/home" },
+  { name: "Home", href: "/home" },
   { name: "Tv Shows", href: "/home/shows" },
   { name: "Movies", href: "/home/movies" },
   { name: "Recently", href: "/home/recently" },
@@ -40,7 +41,10 @@ const Navbar = () => {
                 </li>
               ) : (
                 <li>
-                  <Link href={link.href} className="text-white ">
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 text-sm font-normal"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -48,6 +52,11 @@ const Navbar = () => {
             </div>
           ))}
         </ul>
+      </div>
+
+      <div className="flex items-center gap-x-8">
+        <Search className="  size-5 text-gray-300 cursor-pointer" />
+        <Bell className="  size-5 text-gray-300 cursor-pointer" />
       </div>
     </div>
   );
