@@ -17,7 +17,7 @@ const Login = async () => {
   return (
     <div className="flex items-center justify-center">
       <div className="mt-24 rounded-xl bg-black/80 py-10 px-6 md:mt-0 md:max-w-sm md:px-14  ">
-        <form className="">
+        <form method="post" action="/api/auth/signin">
           <h2 className="text-3xl font-semibold  text-white">Sign In</h2>
           <div className="space-y-4 mt-5">
             <Input
@@ -26,12 +26,7 @@ const Login = async () => {
               placeholder="Email"
               className="bg-[#333] placeholder:text-xs placeholder:text-gray-400 w-full inline-block"
             />{" "}
-            <Input
-              type="password"
-              name="password"
-              placeholder="Password"
-              className="bg-[#333] placeholder:text-xs placeholder:text-gray-400 w-full inline-block"
-            />
+     
             <Button
               type="submit"
               variant="destructive"
