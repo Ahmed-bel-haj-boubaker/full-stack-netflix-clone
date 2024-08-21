@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 
 const HomePage = () => {
-  return <Navbar /> ;
+  return <div>Hello ahmed</div>;
 };
 
 export default HomePage;
