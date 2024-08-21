@@ -37,6 +37,7 @@ const MovieCard = ({
       <div className="right-5 top-5 absolute z-10">
         {watchList ? (
           <form>
+            <input type="hidden" name="movieId" value={movieId} />
             <Button variant="outline" size="icon">
               <HeartIcon className="size-4 text-red-500" />
             </Button>
@@ -69,6 +70,8 @@ const MovieCard = ({
         changeState={setOpen}
         youtubeUrl={youtubeUrl}
         key={movieId}
+        duration={0}
+        release={0}
       />
     </>
   );

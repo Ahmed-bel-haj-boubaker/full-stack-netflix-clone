@@ -12,10 +12,14 @@ interface iAppProps {
   state: boolean;
   changeState: any;
   youtubeUrl: string;
+  duration: number;
+  release: number;
 }
 const PlayVideoModal = ({
   title,
   overview,
+  release,
+  duration,
   state,
   changeState,
   youtubeUrl,
