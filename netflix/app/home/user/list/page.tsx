@@ -26,9 +26,9 @@ async function getData(userId: string) {
   });
   return data;
 }
-const page = async () => {
+const WatchList = async () => {
   const session = await getServerSession(authOptions);
-  const data = await getData("abc");
+  const data = await getData(session?.user?.email as string);
   return (
     <>
       <h1 className="text-white text-4xl font-bold underline mt-10 px-5 sm:px-0">
@@ -77,4 +77,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default WatchList;
