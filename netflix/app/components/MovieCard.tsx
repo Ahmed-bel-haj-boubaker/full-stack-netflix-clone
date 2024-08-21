@@ -53,7 +53,7 @@ const MovieCard = ({
           </p>
           <p className="font-normal text-sm">{time}h</p>
         </div>
-        <p>{overview}</p>
+        <p className="line-clamp-1 textsm text-gray-200 font-light">{overview}</p>
       </div>
     </>
   );
