@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { HeartIcon, PlayCircle } from "lucide-react";
 import PlayVideoModal from "./PlayVideoModal";
 import { useState } from "react";
+import { addTowatchList } from "../action";
 
 interface iAppProps {
   title: string;
@@ -37,13 +38,13 @@ const MovieCard = ({
       <div className="right-5 top-5 absolute z-10">
         {watchList ? (
           <form>
-            <input type="hidden" name="movieId" value={movieId} />
             <Button variant="outline" size="icon">
               <HeartIcon className="size-4 text-red-500" />
             </Button>
           </form>
         ) : (
-          <form>
+          <form action={addTowatchList}>
+            <input type="hidden" name="movieId" value={movieId} />
             <Button variant="outline" size="icon">
               <HeartIcon className="size-4  " />
             </Button>
