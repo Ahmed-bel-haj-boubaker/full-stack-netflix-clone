@@ -1,6 +1,6 @@
-import NextAuth from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
-import { PrismaAdapter } from "@auth/prisma-adapter";
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
 import EmailProvider from "next-auth/providers/email";
 
@@ -8,8 +8,8 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const prisma = new PrismaClient();
 
-export const authOptions = {
-  debug: true,
+export const authOptions: NextAuthOptions = {
+  debug: process.env.NODE_ENV === "development",
   adapter: PrismaAdapter(prisma),
   providers: [
     GitHubProvider({

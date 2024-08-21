@@ -41,11 +41,8 @@ const MovieVideo = async () => {
           <MovieButtons
             title={data?.title as string}
             overview={data?.overview as string}
-            releaseDate={data?.release as number}
-            duration={data?.duration as number}
             id={data?.id as number}
             youtubeUrl={data?.youtubeString as string}
-            age={data?.age as number}
           />
         </div>
       </div>

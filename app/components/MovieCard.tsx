@@ -76,8 +76,6 @@ const MovieCard = ({
         changeState={setOpen}
         youtubeUrl={youtubeUrl}
         key={movieId}
-        duration={0}
-        release={0}
       />
     </>
   );

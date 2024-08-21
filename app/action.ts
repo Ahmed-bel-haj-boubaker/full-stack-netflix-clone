@@ -6,7 +6,7 @@ import { authOptions } from "./utils/auth";
 
 export async function addTowatchList(formData: FormData) {
   const movieId = formData.get("movieId");
-  const pathname = formData.get("pathname");
+  const pathname = formData.get("pathname") as string;
   const session = await getServerSession(authOptions);
   const data = await prisma.watchList.create({
     data: {

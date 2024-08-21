@@ -7,20 +7,17 @@ import PlayVideoModal from "./PlayVideoModal";
 interface iAppProps {
   title: string;
   overview: string;
-  releaseDate: string;
-  duration: number;
+
   id: number;
   youtubeUrl: string;
-  age: number;
 }
 
 const MovieButtons = ({
   title,
   overview,
-  age,
+
   id,
-  duration,
-  releaseDate,
+
   youtubeUrl,
 }: iAppProps) => {
   const [open, setOpen] = useState(false);
@@ -44,9 +41,6 @@ const MovieButtons = ({
         changeState={setOpen}
         overview={overview}
         youtubeUrl={youtubeUrl}
-        duration={duration}
-        release={releaseDate}
-        age={age}
       />
     </>
   );

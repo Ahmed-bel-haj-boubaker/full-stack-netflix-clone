@@ -46,7 +46,7 @@ const Login = async () => {
         <div className="flex w-full justify-center items-center gap-x-3 mt-6">
           <GithubSignInButton />
           <Button variant="outline" size="icon">
-            <Image src={googleIcon} className=" size-6" />
+            <Image src={googleIcon} className=" size-6" alt="google" />
           </Button>
         </div>
       </div>
